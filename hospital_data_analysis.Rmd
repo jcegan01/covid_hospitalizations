@@ -9,8 +9,8 @@ Tools for working with COVID-19 Forecast Hub data: covidHubUtils R package
 http://reichlab.io/covidHubUtils/articles/covidHubUtils-overview.html
 ```{r}
 # BEFORE RUNNING THIS NOTEBOOK, UNCOMMENT THIS CELL TO RUN THE COMMANDS BELOW
-#devtools::install_github("reichlab/zoltr")
-#devtools::install_github("reichlab/covidHubUtils")
+devtools::install_github("reichlab/zoltr")
+devtools::install_github("reichlab/covidHubUtils")
 ```
 # Section 1: Imports and Inputs
 ## Import Libraries

@@ -4,7 +4,7 @@ This work was done for FEMA to give a weekly status update on COVID-19 in Region
 This documentation refers to the file “hospital_data_analysis.Rmd,” which is used to generate plots for the weekly PowerPoint report named “Region I COVID Hospital Utilization Analysis.”
 
 Initialization:
--	The script “HHS Presentation Combined.Rmd” is an R markdown script. Therefore, R Studio Desktop needs to be installed on the machine where the script is run. R Studio can be downloaded for free at https://www.rstudio.com/products/rstudio/download/#download
+-	The script “hospital_data_analysis.Rmd” is an R markdown script. Therefore, R Studio Desktop needs to be installed on the machine where the script is run. R Studio can be downloaded for free at https://www.rstudio.com/products/rstudio/download/#download
 -	The first time the script is run, tools for working with CDC ensemble forecast data will need to be downloaded (http://reichlab.io/covidHubUtils/articles/covidHubUtils-overview.html)
 o	Uncomment the first code chunk and run, installing two libraries
 	devtools::install_github("reichlab/zoltr")
