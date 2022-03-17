@@ -1,7 +1,7 @@
 FEMA COVID Hospitalization - Weekly Presentation
 
 This work was done for FEMA to give a weekly status update on COVID-19 in Region 1 (R1) covering New England (MA, CT, RI, VT, NH, ME).
-This documentation refers to the file “HHS Presentation Combined.Rmd,” which is used to generate plots for the weekly PowerPoint report named “Region I COVID Hospital Utilization Analysis.”
+This documentation refers to the file “hospital_data_analysis.Rmd,” which is used to generate plots for the weekly PowerPoint report named “Region I COVID Hospital Utilization Analysis.”
 
 Initialization:
 -	The script “HHS Presentation Combined.Rmd” is an R markdown script. Therefore, R Studio Desktop needs to be installed on the machine where the script is run. R Studio can be downloaded for free at https://www.rstudio.com/products/rstudio/download/#download
