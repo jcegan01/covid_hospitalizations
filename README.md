@@ -21,7 +21,7 @@ o	3 dates will be updated each week (described below)
 o	NOTE: If analyzing HRRs outside R1, change encodings in “Divide into Target HRRs” section
 
 Upkeep:
--	Each week, a new “[Unified] Hospital Analytic.csv” will need to be downloaded from HHS Protect to the “Import data” folder
+-	Each week, a new “[Unified] Hospital Analytic.csv” will need to be downloaded from HHS Protect to the “data” folder
 -	Each week, new collection dates need to be set (“Set Important Variables” section)
 o	Date most hospitals reported for HHS data (typically the previous Wednesday)
 o	Latest CDC forecast date (typically the previous Monday)
