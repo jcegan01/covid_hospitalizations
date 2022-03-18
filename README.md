@@ -21,6 +21,7 @@ This README refers to the file “hospital_data_analysis.Rmd,” which is used t
         - Downloaded each week from HHS Protect
         - Must be placed in the "data" folder before running the code
         - An HHS account is required to access HHS Protect
+        - If the code is run without this file, it will load an example dataset in it's place
 -	Set dates in the “Set Important Variables” chunk
     - 3 dates will be updated each week (described in Upkeep section below)
 -	Set location for analysis in “Import Libraries” chunk
