@@ -371,17 +371,18 @@ pre code {
 
 
 <p><br></p>
-<p>This work was done for FEMA to give a weekly status update on
-COVID-19 in Region 1 (R1) covering New England (MA, CT, RI, VT, NH, ME).
-This documentation refers to the file “hospital_data_analysis.Rmd,”
-which is used to generate plots for the weekly PowerPoint report named
-“Region I COVID Hospital Utilization Analysis.”</p>
+<p>USACE-ERDC’s analysis to deliver weekly status updates to FEMA Region
+1 on COVID-19 hospitalizations in New England (MA, CT, RI, VT, NH, ME).
+This README refers to the file “hospital_data_analysis.Rmd,” which is
+used to generate plots for the weekly PowerPoint report named “Region I
+COVID Hospital Utilization Analysis.”</p>
 <div id="initialization" class="section level3">
 <h3>Initialization:</h3>
 <ul>
 <li>The script “hospital_data_analysis.Rmd” is an R markdown script.
-Therefore, R Studio Desktop needs to be installed on the machine where
-the script is run. R Studio can be downloaded for free at <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></li>
+Therefore, R Project and R Studio Desktop needs to be installed on the
+machine where the script is run. R Studio can be downloaded for free at
+<a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></li>
 <li>The first time the script is run, tools for working with CDC
 ensemble forecast data will need to be downloaded (<a href="http://reichlab.io/covidHubUtils/articles/covidHubUtils-overview.html" class="uri">http://reichlab.io/covidHubUtils/articles/covidHubUtils-overview.html</a>).
 Uncomment the first code chunk and run, installing two libraries:
@@ -389,38 +390,46 @@ Uncomment the first code chunk and run, installing two libraries:
 <li>devtools::install_github(“reichlab/zoltr”)</li>
 <li>devtools::install_github(“reichlab/covidHubUtils”)</li>
 </ul></li>
-<li>Several files will be needed to run analysis. These are stored in
-the “data” folder attached, which must be downloaded to the same folder
-where the script “hospital_data_analysis.Rmd” is located:
+<li>Two data files are also needed to run the analysis. To be read by
+the code, these files must be stored in the “data” folder, which must be
+located in the folder where the script “hospital_data_analysis.Rmd”
+resides.
 <ul>
-<li>Population breakdown (“NST-EST2021-POP.xlsx”)</li>
-<li>HHS Protect data (“[Unified] Hospital Analytic.csv”)
+<li>Population breakdown (“NST-EST2021-POP.xlsx”) - located in this
+repository</li>
+<li>HHS Protect data (“[Unified] Hospital Analytic.csv”) - not located
+in this repository due to large file size (&gt;3GB)
 <ul>
 <li>Downloaded each week from HHS Protect</li>
+<li>Must be placed in the “data” folder before running the code</li>
 <li>An HHS account is required to access HHS Protect</li>
 </ul></li>
 </ul></li>
 <li>Set dates in the “Set Important Variables” chunk
 <ul>
-<li>3 dates will be updated each week (described below)</li>
+<li>3 dates will be updated each week (described in Upkeep section
+below)</li>
 </ul></li>
 <li>Set location for analysis in “Import Libraries” chunk
 <ul>
-<li>NOTE: If analyzing HRRs outside R1, change encodings in “Divide into
-Target HRRs” section</li>
+<li>Note: If analyzing HRRs outside Region 1, change encoding in “Divide
+into Target HRRs” section</li>
 </ul></li>
 </ul>
 </div>
 <div id="upkeep" class="section level3">
 <h3>Upkeep:</h3>
 <ul>
-<li>Each week, a new “[Unified] Hospital Analytic.csv” will need to be
-downloaded from HHS Protect to the “data” folder</li>
-<li>Each week, new collection dates need to be set (“Set Important
-Variables” section) o Date most hospitals reported for HHS data
-(typically the previous Wednesday) o Latest CDC forecast date (typically
-the previous Monday) o Latest JHU case count (typically the previous
-Friday)</li>
+<li>Before running, the most recent “[Unified] Hospital Analytic.csv”
+file needs to be downloaded from HHS Protect to the “data” folder</li>
+<li>The user needs to specify new collection dates (“Set Important
+Variables” section)
+<ul>
+<li>Date most hospitals reported for HHS data (typically the previous
+Wednesday)</li>
+<li>Latest CDC forecast date (typically the previous Monday)</li>
+<li>Latest JHU case count (typically the previous Friday)</li>
+</ul></li>
 </ul>
 </div>
 <div id="outputs" class="section level3">

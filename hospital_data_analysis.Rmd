@@ -2,7 +2,7 @@
 title: "HHS-Protect Data Analysis"
 author: "Jeff Cegan"
 date: "2022-03-17"
-output: time series graphs for PPT
+output: html_document
 ---
 
 Tools for working with COVID-19 Forecast Hub data: covidHubUtils R package
@@ -79,19 +79,24 @@ forecast_start_date <- '2021-11-01'
 
 ## HHS Protect data downloaded weekly for report 'Region I COVID Hospital Utilization Analysis'
 ```{r}
-df_raw <- read.csv('data/[Unified] Hospital Analytic.csv') %>%
-  # Part of R1 is covered by the Albany, NY HRR - NY is included
-  # Filtering by states can be removed/changed, but will take longer to run the larger the selection
-    filter(state %in% c(target_states, 'NY')) %>%
-		mutate(collection_date = as.Date(collection_date)) %>%
-		filter(collection_date > start_date)
-# Issues with file downloads - comment out below line as
-# needed:
-colnames(df_raw)[1] <- gsub('^...','',colnames(df_raw)[1])
-
-summary(df_raw %>%
-  select(hospital_pk, collection_date, total_beds, inpatient_beds, total_icu_beds)
-  )
+use_example <- TRUE
+if(file.exists('data/[Unified] Hospital Analytic.csv')){
+  df_raw <- read.csv('data/[Unified] Hospital Analytic.csv') %>%
+    # Part of R1 is covered by the Albany, NY HRR - NY is included
+    # Filtering by states can be removed/changed, but will take longer to run the larger the selection
+      filter(state %in% c(target_states, 'NY')) %>%
+  		mutate(collection_date = as.Date(collection_date)) %>%
+  		filter(collection_date > start_date)
+  # Issues with file downloads - comment out below line as
+  # needed:
+  colnames(df_raw)[1] <- gsub('^...','',colnames(df_raw)[1])
+  
+  summary(df_raw %>%
+    select(hospital_pk, collection_date, total_beds, inpatient_beds, total_icu_beds)
+    )
+} else{
+  load(file='data/hhs_subset_example.rda')
+}
 ```
 
 ## CDC Ensemble Forecast
